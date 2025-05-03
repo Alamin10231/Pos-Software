@@ -4,7 +4,6 @@ import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 const Sidebar = ({ item }) => {
   const { section, items } = item;
 
-
   const [isParentOpen, setIsParentOpen] = useState(null);
   const handletoggle = (index) => {
     setIsParentOpen(isParentOpen === index ? null : index);
@@ -15,17 +14,17 @@ const Sidebar = ({ item }) => {
       <div className="">
         <h1 className="absolute top-5 ">Company Logo</h1>
       </div>
-      <div className="border-t-2 border-gray-400 w-full pt-5">
+      <div className="border-t border-gray-400 w-full pt-5">
         <h3 className=""> {section}</h3>
       </div>
 
       <div className=" w-[240px] mb-6">
         {items.map((sub, index) => (
-          <div >
+          <div>
             <li
               onClick={() => handletoggle(index)}
               className="flex items-center justify-between px-2 py-2 rounded-md my-2 
-                       border-2 border-gray-400 cursor-pointer transition-all 
+                       border border-gray-400 cursor-pointer transition-all 
                        hover:bg-gray-100 duration-300 ease-in-out text-sm"
               key={index}
             >
@@ -42,17 +41,22 @@ const Sidebar = ({ item }) => {
               </span>
             </li>
 
-           
-              <div className={` overflow-hidden duration-700 ${isParentOpen === index?"max-h-96":"max-h-0"}`} >
-                {sub.subItems?.map((sb, index) => (
-                  <ul className="">
-                    <li className="border-2 border-gray-400 cursor-pointer rounded-md my-2 px-2 text-sm" key={index}>
-                      {sb}
-                    </li>
-                  </ul>
-                ))}
-              </div>
-        
+            <div
+              className={` overflow-hidden duration-700 ${
+                isParentOpen === index ? "max-h-96" : "max-h-0"
+              }`}
+            >
+              {sub.subItems?.map((sb, index) => (
+                <ul className="">
+                  <li
+                    className="border border-gray-400 cursor-pointer rounded-md my-2 px-2 text-sm"
+                    key={index}
+                  >
+                    {sb}
+                  </li>
+                </ul>
+              ))}
+            </div>
           </div>
         ))}
       </div>

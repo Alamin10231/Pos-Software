@@ -22,7 +22,7 @@ const Layout = () => {
 
           <div className="w-5/6">
             <Navbar></Navbar>
-            <div className="bg-green-700 h-screen">
+            <div className="bg-gray-200 h-screen  ">
           <Home></Home>
           </div>
           </div>
