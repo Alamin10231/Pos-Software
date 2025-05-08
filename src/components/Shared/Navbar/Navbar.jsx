@@ -10,14 +10,19 @@ import "animate.css";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { CiSettings } from "react-icons/ci";
 import { LuMessageSquare } from "react-icons/lu";
+import CustomHook from "../../CustomHook/CustomHook";
 
-const Navbar = () => {
+const Navbar = ({ isCollapsed }) => {
   const [clicked, setclicked] = useState(null);
   const [profile, setProfile] = useState(null);
   return (
-    <div className=" items-center ">
-      <nav className=" flex items-center justify-between px-5 py-4 bg-[#ffffff] w-5/6 fixed ">
-        <div className="relative flex items-center justify-between ">
+    <div className=" items-center w-full hidden lg:block">
+      <nav
+        className={` flex items-center justify-between ${
+          isCollapsed ? " pr-[130px]" : " "
+        } py-4 bg-[#ffffff] w-full fixed  pr-[320px] pl-4 transition-all duration-300 ease-in-out`}
+      >
+        <div className="relative flex items-center justify-between">
           <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg
               class="w-4 h-4 text-gray-500 dark:text-gray-400"
@@ -35,14 +40,7 @@ const Navbar = () => {
               />
             </svg>
           </div>
-          <div className="">
-            <input
-              className="w-full px-2 py-2 ps-8 text-sm text-gray-200 rounded-md border-gray-300 border"
-              type="text"
-              placeholder="Search"
-              required
-            />
-          </div>
+          <CustomHook></CustomHook>
         </div>
         <div className="flex items-center gap-2">
           <div className="flex  items-center justify-between gap-4 border-r border-gray-500 pr-2">
@@ -102,7 +100,7 @@ const Navbar = () => {
             </div>
 
             <div
-              className="relative duration-700 transition-all   rounded-3xl py-2 px-2"
+              className="relative duration-300 transition-all   rounded-3xl py-2 px-2"
               onClick={() => setProfile(!profile)}
             >
               <div className="w-8 h-5 items-center flex">
@@ -124,31 +122,33 @@ const Navbar = () => {
                         alt=""
                       />
                       <div className=" text-left">
-                        <h1 className="text-sm w-full text-nowrap">Alamin Hossain</h1>
+                        <h1 className="text-sm w-full text-nowrap">
+                          Alamin Hossain
+                        </h1>
                         <p className="text-sm text-gray-500">admin</p>
                       </div>
-                    
                     </div>
                     <div className="text-left py-4 border-b border-gray-300">
-                    <div className="flex items-center justify-left gap-2 py-1   ">
-                    <MdInsertEmoticon className=" " />
-                    My Profile
+                      <div className="flex items-center justify-left gap-2 py-1   ">
+                        <MdInsertEmoticon className=" " />
+                        My Profile
+                      </div>
+                      <div className="flex items-center justify-left gap-2 py-1  ">
+                        <MdInsertEmoticon className="" />
+                        Reports
+                      </div>
+                      <div className="flex items-center justify-left gap-2 py-1  ">
+                        <MdInsertEmoticon className="" />
+                        setting
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-left gap-2 py-1  ">
+                      <MdInsertEmoticon className="text-red-700" />
+                      <Link to="/login">
+                        <p className="text-red-700">logout</p>
+                      </Link>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-left gap-2 py-1  ">
-                    <MdInsertEmoticon className="" />
-                    Reports
-                  </div>
-                  <div className="flex items-center justify-left gap-2 py-1  ">
-                    <MdInsertEmoticon className="" />
-                    setting
-                  </div>
-                  </div>
-                  <div className="flex items-center justify-left gap-2 py-1  ">
-                    <MdInsertEmoticon className="text-red-700" />
-                    <Link to="/login"><p  className="text-red-700">logout</p></Link>
-                  </div>
-                  </div>
-                  
                 </button>
               )}
             </div>

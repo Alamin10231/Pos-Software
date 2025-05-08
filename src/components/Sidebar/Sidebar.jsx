@@ -1,65 +1,91 @@
-import { useState } from "react";
-import { FaAngleDown, FaAngleRight } from "react-icons/fa";
+import React, { useState } from "react";
+import { IoChevronDown, IoChevronUp } from "react-icons/io5";
+import { menuItems } from "../../Data/Sidebardata.js";
 
-const Sidebar = ({ item }) => {
-  const { section, items } = item;
+const Sidebar = ({ item, isCollapsed }) => {
+  const { section } = item;
+  const [expandedItems, setExpandedItems] = useState({});
+  const SectionType = menuItems.filter((menu) => menu.section === section);
 
-  const [isParentOpen, setIsParentOpen] = useState(null);
-  const handletoggle = (index) => {
-    setIsParentOpen(isParentOpen === index ? null : index);
+  const toggleMenu = (itemId) => {
+    setExpandedItems(prev => ({
+      ...prev,
+      [itemId]: !prev[itemId],
+    }));
+  };
+
+  const renderSubItems = (subItems, parentId) => {
+    return (
+      <div
+        className={`overflow-hidden transition-all duration-300 ${
+          expandedItems[parentId] ? "max-h-[1000px]" : "max-h-0"
+        }`}
+      >
+        <ul className="ml-4">
+          {subItems.map((subItem, subIndex) => (
+            <li key={`${parentId}-${subIndex}`}>
+              <div
+                className={`flex items-center justify-between cursor-pointer hover:bg-gray-100 p-2 ${
+                  isCollapsed ? "" : "rounded-md"
+                }`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleMenu(`${parentId}-${subIndex}`);
+                }}
+              >
+                <span className={isCollapsed ? "hidden" : ""}>
+                  {subItem.name}
+                </span>
+                {subItem.subItems.length > 0 && (
+                  <span className={isCollapsed ? "hidden" : "block"}>
+                    {expandedItems[`${parentId}-${subIndex}`] ? (
+                      <IoChevronUp />
+                    ) : (
+                      <IoChevronDown />
+                    )}
+                  </span>
+                )}
+              </div>
+
+              {subItem.subItems.length > 0 &&
+                renderSubItems(subItem.subItems, `${parentId}-${subIndex}`)}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
   };
 
   return (
-    <div>
-      <div className="">
-        <h1 className="absolute top-5 ">Company Logo</h1>
-      </div>
-      <div className="border-t border-gray-400 w-full pt-5">
-        <h3 className=""> {section}</h3>
-      </div>
+    <div className={`${isCollapsed ? "w-16 p-4" : "p-6 mb-4 rounded"} border-b`}>
+      {!isCollapsed && <h1 className="text-xl font-bold mb-2">{section}</h1>}
 
-      <div className=" w-[240px] mb-6">
-        {items.map((sub, index) => (
-          <div>
-            <li
-              onClick={() => handletoggle(index)}
-              className="flex items-center justify-between px-2 py-2 rounded-md my-2 
-                       border border-gray-400 cursor-pointer transition-all 
-                       hover:bg-gray-100 duration-300 ease-in-out text-sm"
-              key={index}
-            >
-              {sub.name}
-
-              <span>
-                <button>
-                  <FaAngleRight
-                    className={` transition-all duration-500 ${
-                      isParentOpen === index ? "rotate-0" : "rotate-90"
-                    }`}
-                  />
-                </button>
-              </span>
-            </li>
-
+      <ul>
+        {SectionType.map((item) => (
+          <li key={item.id} className="py-1">
             <div
-              className={` overflow-hidden duration-700 ${
-                isParentOpen === index ? "max-h-96" : "max-h-0"
-              }`}
+              className={`flex items-center justify-between cursor-pointer hover:bg-gray-100 p-2 ${
+                isCollapsed ? "border-none" : "px-2 rounded-md"
+              } transition-all duration-300`}
+              onClick={() => toggleMenu(item.id)}
             >
-              {sub.subItems?.map((sb, index) => (
-                <ul className="">
-                  <li
-                    className="border border-gray-400 cursor-pointer rounded-md my-2 px-2 text-sm"
-                    key={index}
-                  >
-                    {sb}
-                  </li>
-                </ul>
-              ))}
+              <div className="flex gap-4 items-center">
+                <item.icon className="text-2xl text-gray-500" />
+                {!isCollapsed && (
+                  <span className="font-semibold">{item.name}</span>
+                )}
+              </div>
+              {!isCollapsed && item.subItems.length > 0 && (
+                <span className="transition-transform duration-300">
+                  {expandedItems[item.id] ? <IoChevronUp /> : <IoChevronDown />}
+                </span>
+              )}
             </div>
-          </div>
+
+            {item.subItems.length > 0 && renderSubItems(item.subItems, item.id)}
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

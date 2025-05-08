@@ -4,38 +4,66 @@
     "items": [
       {
         "name": "Dashboard",
-        "icon": "dashboard",
-        "active": true,
-        "subItems": ["alu", "malu", "kodu"]
-      },
-      {
-        "name": "Super Admin",
-        "icon": "super_admin",
+        "icon": "RxDashboard",
         "active": true,
         "subItems": [
-          "Dashboard",
-          "Companies",
-          "Subscriptions",
-
-          "Domain",
-          "Purchase Transaction"
+          {
+            "name": "Analytics",
+            "subItems": [
+              {
+                "name": "Real-time Stats",
+                "subItems": [
+                  {
+                    "name": "User Activity",
+                    "subItems": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reports",
+            "subItems": [
+              {
+                "name": "Monthly Summary",
+                "subItems": []
+              }
+            ]
+          }
         ]
       },
       {
-        "name": "Application",
-        "icon": "application",
-        "active": false
-      },
-      {
-        "name": "Layouts",
-        "icon": "layouts",
-        "active": false,
+        "name": "Super Admin",
+        "icon": "GrUserAdmin",
+        "active": true,
         "subItems": [
-          "Dashboard",
-          "Companies",
-          "Subscriptions",
-
-          "Purchase Transaction"
+          {
+            "name": "Admin Dashboard",
+            "subItems": [
+              {
+                "name": "User Management",
+                "subItems": [
+                  {
+                    "name": "Role Permissions",
+                    "subItems": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Company Settings",
+            "subItems": [
+              {
+                "name": "New Registrations",
+                "subItems": []
+              },
+              {
+                "name": "Billing Config",
+                "subItems": []
+              }
+            ]
+          }
         ]
       }
     ]
@@ -44,54 +72,33 @@
     "section": "Inventory",
     "items": [
       {
-        "name": "Products",
-        "icon": "products",
-        "active": false
-      },
-      {
-        "name": "Create Product",
-        "icon": "create_product",
-        "active": false
-      },
-      {
-        "name": "Expired Products",
-        "icon": "expired_products",
-        "active": false
-      },
-      {
-        "name": "Low Stocks",
-        "icon": "low_stocks",
-        "active": false
-      },
-      {
-        "name": "Category",
-        "icon": "category",
-        "active": false
-      },
-      {
-        "name": "Sub Category",
-        "icon": "sub_category",
-        "active": false
-      },
-      {
-        "name": "Brands",
-        "icon": "brands",
-        "active": false
-      },
-      {
-        "name": "Units",
-        "icon": "units",
-        "active": false
-      },
-      {
-        "name": "Variant Attributes",
-        "icon": "variant_attributes",
-        "active": false
-      },
-      {
-        "name": "Warranties",
-        "icon": "warranties",
-        "active": false
+        "name": "Product Management",
+        "icon": "MdOutlineSettingsApplications",
+        "subItems": [
+          {
+            "name": "Stock Control",
+            "subItems": [
+              {
+                "name": "Inventory Tracking",
+                "subItems": [
+                  {
+                    "name": "Batch Numbers",
+                    "subItems": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Catalog Setup",
+            "subItems": [
+              {
+                "name": "Product Variants",
+                "subItems": []
+              }
+            ]
+          }
+        ]
       }
     ]
   }
