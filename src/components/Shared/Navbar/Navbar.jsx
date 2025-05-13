@@ -16,10 +16,10 @@ const Navbar = ({ isCollapsed }) => {
   const [clicked, setclicked] = useState(null);
   const [profile, setProfile] = useState(null);
   return (
-    <div className=" items-center w-full hidden lg:block">
+    <div className=" items-center w-full hidden lg:block ">
       <nav
         className={` flex items-center justify-between ${
-          isCollapsed ? " pr-[130px]" : " "
+          isCollapsed ? " pr-[140px]" : " "
         } py-4 bg-[#ffffff] w-full fixed  pr-[320px] pl-4 transition-all duration-300 ease-in-out`}
       >
         <div className="relative flex items-center justify-between">

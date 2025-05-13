@@ -1,0 +1,1 @@
+ export const admindashboard1 ="/dashboard/AdminDashboard1"
