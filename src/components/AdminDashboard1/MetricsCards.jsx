@@ -24,7 +24,7 @@ const MetricsCards = () => {
         {/* Card style content */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
   {/* Card 1 */}
-  <div className="bg-gradient-to-r from-rose-100 to-amber-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out flex gap-4 items-center">
+  <div className="bg-gradient-to-r from-rose-100 to-amber-200 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 ease-in-out flex gap-4 items-center">
     <div className="bg-white text-pink-600 p-4 rounded-full shadow-md">
       <FaRegListAlt className="text-3xl" />
     </div>
@@ -35,7 +35,7 @@ const MetricsCards = () => {
   </div>
 
   {/* Card 2 */}
-  <div className="bg-gradient-to-r from-blue-100 to-green-200 p-6 rounded-xl shadow-lg flex gap-4 items-center">
+  <div className="bg-gradient-to-r from-blue-100 to-green-200 p-6 rounded-xl shadow-md flex gap-4 items-center">
     <div className="bg-white text-blue-600 p-4 rounded-full shadow-md">
       <BiPurchaseTag className="text-3xl" />
     </div>
@@ -46,7 +46,7 @@ const MetricsCards = () => {
   </div>
 
   {/* Card 3 */}
-  <div className="bg-gradient-to-r from-purple-100 to-indigo-200 p-6 rounded-xl shadow-lg flex gap-4 items-center">
+  <div className="bg-gradient-to-r from-purple-100 to-indigo-200 p-6 rounded-xl shadow-md flex gap-4 items-center">
     <div className="bg-white text-purple-600 p-4 rounded-full shadow-md">
       <GiProfit className="text-3xl" />
     </div>
@@ -57,7 +57,7 @@ const MetricsCards = () => {
   </div>
 
   {/* Card 4 */}
-  <div className="bg-gradient-to-r from-teal-100 to-cyan-200 p-6 rounded-xl shadow-lg flex gap-4 items-center">
+  <div className="bg-gradient-to-r from-teal-100 to-cyan-200 p-6 rounded-xl shadow-md flex gap-4 items-center">
     <div className="bg-white text-teal-600 p-4 rounded-full shadow-md">
       <GoPeople className="text-3xl" />
     </div>

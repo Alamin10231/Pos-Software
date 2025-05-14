@@ -3,15 +3,15 @@ import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import bglogin from "../../assets/Login/bg-login.jpg";
 
-const Login = () => {
+const SignUp = () => {
   return (
     <div className="min-h-screen w-[80%] mx-auto">
       <div className="flex flex-col md:flex-row min-h-screen py-20">
-        {/* Left Section - Login Form */}
+        {/* Left Section - SignUp Form */}
         <div className="w-full md:w-1/2 flex flex-1 justify-center items-center bg-[#f7fbfe] p-4 md:p-8 lg:p-12">
           <div className="w-full max-w-md">
             <div className="text-center mb-6">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">
+              <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
                 Post Software
               </h1>
             </div>
@@ -28,8 +28,23 @@ const Login = () => {
 
               <div className="mb-4">
                 <label
-                  htmlFor="email"
+                  htmlFor="name"
                   className="block text-md text-left text-gray-700 font-medium mb-1"
+                >
+                  Name
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Enter your name"
+                  className="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+
+              <div className="mb-4">
+                <label
+                  htmlFor="email"
+                  className="block text-md text-left  text-gray-700 font-medium mb-1"
                 >
                   Email
                 </label>
@@ -44,7 +59,7 @@ const Login = () => {
               <div className="mb-4">
                 <label
                   htmlFor="password"
-                  className="block text-md text-left text-gray-700 font-medium mb-1"
+                  className="block text-md text-left py-1 text-gray-700 font-medium mb-1"
                 >
                   Password
                 </label>
@@ -52,34 +67,31 @@ const Login = () => {
                   id="password"
                   type="password"
                   placeholder="Password"
-                  className="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full   border px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
               </div>
 
-              <div className="flex justify-between items-center text-sm mb-6">
+              <div className="flex items-center text-sm mb-6">
                 <label className="flex items-center gap-2">
                   <input type="checkbox" className="accent-blue-600" />
                   Remember me
                 </label>
-                <span className="text-blue-600 hover:underline cursor-pointer">
-                  Forgot Password?
-                </span>
               </div>
 
               <button
                 type="submit"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg font-semibold transition-colors"
               >
-                Login
+                Sign Up
               </button>
 
               <p className="mt-4 text-center text-sm">
-                New here?{" "}
+                Already have an account?{" "}
                 <Link
-                  to="/SignUp"
+                  to="/login"
                   className="text-blue-600 hover:underline font-medium"
                 >
-                  Create account
+                  Sign In
                 </Link>
               </p>
 
@@ -105,7 +117,7 @@ const Login = () => {
               </div>
 
               <p className="text-center text-xs text-gray-500">
-                © 2025 PosSoftware. All rights reserved
+                © 2025 PosSoftware
               </p>
             </form>
           </div>
@@ -120,13 +132,14 @@ const Login = () => {
             </h2>
             
             <p className="text-white/90 text-lg md:text-xl leading-relaxed">
-              Streamline your business operations with our comprehensive POS solution. 
-              Manage sales, inventory, and customers in one place.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+              sapiente sit deleniti alias corrupti esse ex nihil aliquam
+              laudantium vitae.
             </p>
 
             <img
               src={bglogin}
-              alt="POS System Interface"
+              alt="Login Illustration"
               className="rounded-xl w-full h-64 md:h-96 object-cover shadow-xl"
             />
           </div>
@@ -136,4 +149,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;

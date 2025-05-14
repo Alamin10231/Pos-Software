@@ -13,10 +13,10 @@ const data = [
 const Charts = () => {
   return (
     <>
-    <div className=" gap-10">
+    <div className=" gap-10 w-1/2">
       <div className="bg-white p-6 rounded-xl shadow-lg col-span-2">
       <h3 className="text-xl font-semibold mb-4">Sales Overview</h3>
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height={400}>
         <BarChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" stroke="#8884d8" />

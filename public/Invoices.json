@@ -1,0 +1,54 @@
+{
+  "invoices": [
+    {
+      "date": "2023-10-01",
+      "referenceNo": "REF-001",
+      "customer": "John Doe",
+      "status": "Pending",
+      "total": 500.00,
+      "paymentStatus": "Unpaid",
+      "paid": 0.00,
+      "totalAmount": 500.00
+    },
+    {
+      "date": "2023-10-02",
+      "referenceNo": "REF-002",
+      "customer": "Jane Smith",
+      "status": "Completed",
+      "total": 1200.00,
+      "paymentStatus": "Paid",
+      "paid": 1200.00,
+      "totalAmount": 1200.00
+    },
+    {
+      "date": "2023-10-03",
+      "referenceNo": "REF-003",
+      "customer": "Alex Brown",
+      "status": "Processing",
+      "total": 750.00,
+      "paymentStatus": "Partial",
+      "paid": 300.00,
+      "totalAmount": 750.00
+    },
+    {
+      "date": "2023-10-04",
+      "referenceNo": "REF-004",
+      "customer": "Emily Clark",
+      "status": "Shipped",
+      "total": 950.00,
+      "paymentStatus": "Unpaid",
+      "paid": 0.00,
+      "totalAmount": 950.00
+    },
+    {
+      "date": "2023-10-05",
+      "referenceNo": "REF-005",
+      "customer": "Mike Wilson",
+      "status": "Delivered",
+      "total": 2300.00,
+      "paymentStatus": "Paid",
+      "paid": 2300.00,
+      "totalAmount": 2300.00
+    }
+  ]
+}

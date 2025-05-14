@@ -5,13 +5,12 @@ import Navbar from "../components/Shared/Navbar/Navbar";
 import Sidebars from "../components/Sidebars/Sidebars";
 import { dashboardRoutes } from "../Data/Admindata1";
 import { GradientRingLoadingSpinner } from "../Ui/Loader";
-import AdminDashboard1 from "../Pages/AdminDashboard/AdminDashboard1";
 
 const Layout = () => {
   const location = useLocation();
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const hideNavbar = ["/login", "/signin"].includes(location.pathname);
+  const hideNavbar = ["/login", "/SignUp"].includes(location.pathname);
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,7 +28,7 @@ const Layout = () => {
           {/* Sidebar */}
           <div
             className={`transition-all duration-300  ${
-              isCollapsed ? "w-28" : "w-72" 
+              isCollapsed ? "w-28" : "w-72"
             } ${isMobile ? "fixed z-30 inset-y-0 left-0" : ""}`}
           >
             <Sidebars
@@ -71,7 +70,7 @@ const Layout = () => {
         </div>
       )}
 
-      {/* For login or signin pages */}
+      {/* For login or SignUp pages */}
       {hideNavbar && <Outlet />}
     </div>
   );
