@@ -10,6 +10,7 @@ import Table from "../../components/AdminDashboard1/Table.jsx";
 import { Achivement } from "../../components/AdminDashboard1/Achivement.jsx";
 import ProductTable from "../../components/AdminDashboard1/ProductTable.jsx";
 import RecentlyAdded from "../../components/AdminDashboard1/RecentlyAdded.jsx";
+import Recenttransaction from "../../components/AdminDashboard1/Recenttransaction.jsx";
 // put your image here
 
 const AdminDashboard1 = () => {
@@ -21,7 +22,7 @@ const AdminDashboard1 = () => {
 
         <Charts2 />
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-4 py-10">
         <SalesChart />
         <div>
           <Statsdata />
@@ -37,14 +38,20 @@ const AdminDashboard1 = () => {
            <Achivement  />
          </div>
        
-          <div className="col-span-5">
+          {/* <div className="col-span-5">
             <RecentlyAdded />
-          </div>
+          </div> */}
+          <div className="col-span-5">
+        <Recenttransaction></Recenttransaction>
+      </div>
      
       </div>
       <div>
         <ProductTable />
       </div>
+      {/* <div>
+        <Recenttransaction></Recenttransaction>
+      </div> */}
     </div>
   );
 };

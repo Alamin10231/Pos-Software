@@ -41,29 +41,29 @@ const ProductTable = () => {
         <tbody className="bg-white divide-y divide-gray-200 ">
           {product.map((p) => (
             <tr key={product.id}>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-left">
                 {p.number}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap">
+              <td className="px-6 py-4 whitespace-nowrap text-left ">
                 <img
                   src={p.image}
                   alt={p.title}
                   className="h-12 w-12 object-cover rounded"
                 />
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-medium">
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-medium text-left ">
                 {p.title}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-left ">
                 ${p.price.toFixed(2)}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-left ">
                 {p.code}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-left">
                 {p.manufactureDate}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 space-x-2">
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 space-x-2 text-left">
                 <button className="text-indigo-600 hover:text-indigo-900">
                   Edit
                 </button>
@@ -73,14 +73,7 @@ const ProductTable = () => {
               </td>
             </tr>
           ))}
-          {/* {
-            product.map((p,item)=>(
-              <div key={item}>
-                <h1>{p.number}</h1>
-                
-              </div>
-            ))
-          } */}
+ 
 
         </tbody>
       </table>

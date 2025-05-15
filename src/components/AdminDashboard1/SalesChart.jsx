@@ -58,7 +58,7 @@ const data = [
 const SalesChart = () => {
   return (
     <div className="w-2/3">
-      <ResponsiveContainer width="100%" height={500}>
+      <ResponsiveContainer width="100%" height={550}>
         <BarChart
           width={500}
           height={300}

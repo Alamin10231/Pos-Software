@@ -4,6 +4,7 @@ import Layout from "./Layout/Layout";
 import Login from "./Pages/Login/Login";
 import Sidebars from "./components/Sidebars/Sidebars";
 import SignUp from "./Pages/SignUp/SignUp";
+import Home from "./Pages/Home/Home";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <BrowserRouter basename="/">
           <Routes className="" >
              <Route path={`/`} element={<Login></Login>} />
+             <Route path={`/home`} element={<Home></Home>} />
             <Route path={`/dashboard/*`} element={<Layout />} />
             <Route  path={`/login`} element={<Login></Login>} />
             <Route path={`/SignUp`} element={<SignUp></SignUp>} />

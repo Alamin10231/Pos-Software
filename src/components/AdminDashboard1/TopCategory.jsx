@@ -52,8 +52,8 @@ const TopCategory = () => {
   ];
 
   return (
-    <div className="top-category-chart  " style={{ width: "100%", height: 200 }}>
-    <h2 className="text-left text-xl">Top Categories</h2>
+    <div className="top-category-chart mt-5 " style={{ width: "100%", height: 200 }}>
+    <h2 className="text-left text-xl">Customers Overview</h2>
       <ResponsiveContainer>
         <PieChart>
           <Pie
@@ -68,7 +68,7 @@ const TopCategory = () => {
             dataKey="value"
           >
             {categoryData.map((entry, index) => (
-              <Cell
+              <Cell className="text-left bg-black"
                 key={`cell-${index}`}
                 fill={COLORS[index % COLORS.length]}
                 stroke="#ffffff"

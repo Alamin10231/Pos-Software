@@ -1,0 +1,91 @@
+{
+  "Sale": [
+    {
+      "id": 1,
+      "date": "24 May 2025",
+      "customer": "Andrea Willer  ",
+      "status": "Completed",
+      "total": 4560
+    },
+    {
+      "id": 2,
+      "date": "10 June 2025",
+      "customer": "Michael Smith",
+      "status": "Pending",
+      "total": 3299
+    }
+  ],
+  "Purchase": [
+    {
+      "id": 1,
+      "date": "23 May 2025",
+      "customer": "Timothy Sandsr ",
+      "status": "Draft",
+      "total": 3569
+    },
+    {
+      "id": 2,
+      "date": "01 June 2025",
+      "customer": "Emily Watson",
+      "status": "Confirmed",
+      "total": 4820
+    }
+  ],
+  "Quotation": [
+    {
+      "id": 1,
+      "date": "28 May 2025",
+      "pic": "Alice Morgan",
+      "customer": "Robert Downey",
+      "name": "Project Gamma",
+      "code": "GAMMA#003",
+      "status": "In Progress",
+      "total": 8900
+    },
+    {
+      "id": 2,
+      "date": "30 May 2025",
+      "pic": "Daniel Craig",
+      "customer": "Chris Evans",
+      "name": "Project Delta",
+      "code": "DELTA#004",
+      "status": "Completed",
+      "total": 10200
+    }
+  ],
+
+  "Expenses": [
+    {
+      "id": 1,
+      "date": "25 May 2025",
+      "expenses": "Travel Costs",
+      "description": "Office Supplies",
+      "status": "Reimbursed",
+      "total": 250
+    },
+    {
+      "id": 2,
+      "date": "26 May 2025",
+      "expenses": "Office Supplies",
+      "description": "Travel Costs",
+      "status": "Pending",
+      "total": 1200
+    }
+  ],
+  "Invoices": [
+    {
+      "id": 1,
+      "customer": "Jane Smith ",
+      "due_date": "30 May 2025",
+      "status": "Unpaid",
+      "amount": 2000
+    },
+    {
+      "id": 2,
+      "customer": "Alex Brown ",
+      "due_date": "1 June 2025",
+      "status": "Paid",
+      "amount": 3500
+    }
+  ]
+}
