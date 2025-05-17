@@ -41,7 +41,7 @@ const AdminDashboard1 = () => {
           {/* <div className="col-span-5">
             <RecentlyAdded />
           </div> */}
-          <div className="col-span-5">
+          <div className="col-span-5 ">
         <Recenttransaction></Recenttransaction>
       </div>
      

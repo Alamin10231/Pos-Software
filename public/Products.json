@@ -3,7 +3,7 @@
     {
       "id": 1,
       "number": "P-001",
-      "image": "/images/product1.jpg",
+      "image": "headphone.jpg",
       "title": "Wireless Bluetooth Headphones",
       "price": 129.99,
       "code": "WBH-2023",
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "number": "P-002",
-      "image": "/images/product2.jpg",
+      "image": "Smart.png",
       "title": "Smart Fitness Tracker",
       "price": 79.95,
       "code": "SFT-2023",
@@ -23,7 +23,7 @@
     {
       "id": 3,
       "number": "P-003",
-      "image": "/images/product3.jpg",
+      "image": "Drone.jpg",
       "title": "4K Ultra HD Camera Drone",
       "price": 449.99,
       "code": "UHD-2023",

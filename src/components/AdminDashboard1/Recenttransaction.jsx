@@ -80,7 +80,7 @@ const Recenttransaction = () => {
 
   return (
     <div>
-      <div className="flex  space-x-1 justify-between items-center">
+      <div className="flex  space-x-1 justify-between items-center ">
         {[
           { id: "Sale", level: "Sale" },
           { id: "Purchase", level: "Purchase" },
@@ -91,10 +91,10 @@ const Recenttransaction = () => {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={` px-4 py-2 text-[15px] font-semibold transition-colors duration-200 rounded-none
+            className={` px-4 py-2 text-[15px] font-semibold transition-colors duration-300 rounded-none
               ${
                 activeTab === tab.id
-                  ? "text-gray-900 border-b-2 border-[#126DFE]"
+                  ? "text-gray-900 border-b-2 border-[#126DFE] "
                   : "text-[#252830] hover:text-gray-800 hover:border-gray-300"
               }
               
@@ -105,14 +105,14 @@ const Recenttransaction = () => {
           </button>
         ))}
       </div>
-      <div>
+      <div className="transition-all duration-300">
         {activeTab === "Sale" && (
           <div>
             <Sale />
           </div>
         )}
       </div>
-      <div>{activeTab === "Purchase" && <Purchase />}</div>
+      <div >{activeTab === "Purchase" && <Purchase />}</div>
       <div>{activeTab === "Quotation" && <Quotation />}</div>
       <div>{activeTab === "Expenses" && <Expenses />}</div>
       <div>{activeTab === "Invoices" && <Invocies />}</div>

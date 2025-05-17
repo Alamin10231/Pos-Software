@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 // import productsData from "./products.json";
+//  import pic1 "../../assets/datapic/headphone.jpg"
 
 const ProductTable = () => {
-
-  const [product,setProduct] = useState([])
+  const [product, setProduct] = useState([]);
   useEffect(() => {
     fetch("/Products.json")
-    .then( res => res.json())
-    .then(data => setProduct(data.products))
+      .then((res) => res.json())
+      .then((data) => setProduct(data.products));
   }, []);
   return (
     <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm py-32">
-     
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-gray-50">
           <tr>
@@ -46,9 +45,9 @@ const ProductTable = () => {
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-left ">
                 <img
-                  src={p.image}
+                  src={`/images/${p.image}`}
                   alt={p.title}
-                  className="h-12 w-12 object-cover rounded"
+                  className="h-12 w-12 object-cover rounded-full"
                 />
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-medium text-left ">
@@ -73,8 +72,6 @@ const ProductTable = () => {
               </td>
             </tr>
           ))}
- 
-
         </tbody>
       </table>
     </div>
