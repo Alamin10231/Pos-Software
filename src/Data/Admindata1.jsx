@@ -60,7 +60,8 @@
 // src/Data/Admindata1.js
 import AdminDashboard1 from "../Pages/AdminDashboard/AdminDashboard1";
 import AdminDashboard2 from "../Pages/AdminDashboard/AdminDashboard2";
-import Home from "../Pages/Home/Home"
+import SalesDashboard from "../Pages/AdminDashboard/SalesDashboard";
+import Home from "../Pages/Home/Home";
 
 export const dashboardRoutes = [
   {
@@ -76,6 +77,11 @@ export const dashboardRoutes = [
   {
     path: "/dashboard/AdminDashboard2",
     element: <AdminDashboard2></AdminDashboard2>,
+    name: "admin Dashboard 2",
+  },
+  {
+    path: "/dashboard/SalesDashboard",
+    element: <SalesDashboard></SalesDashboard>,
     name: "admin Dashboard 2",
   },
 ];

@@ -15,7 +15,7 @@ import { RxDashboard } from "react-icons/rx";
 import { TbReportSearch, TbTransfer } from "react-icons/tb";
 import { VscAccount } from "react-icons/vsc";
 import { Link } from "react-router";
-import { admindashboard1 } from "../Utilities/constant";
+import { admindashboard1, admindashboard2, SalesDashboard } from "../Utilities/constant";
 
 export const menuItems = [
   {
@@ -34,12 +34,12 @@ export const menuItems = [
     },
     {
       name: "Admin Dashboard 2",
-      path: "/dashboard/AdminDashboard2", 
+      path: admindashboard2, 
       subItems: [],
     },
     {
       name: "Sales Dashboard",
-      path: "/dashboard/sales", 
+      path:SalesDashboard, 
       subItems: [],
     },
   ],

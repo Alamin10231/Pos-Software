@@ -1,0 +1,38 @@
+{
+  "expiredProducts": [
+    {
+      "id": 101,
+      "number": "EXP-001",
+      "image": "headphone.jpg",
+      "title": "Expired Wireless Bluetooth Headphones",
+      "code": "E-WBH-2022",
+      "manufactureDate": "2022-03-15",
+      "expiredDate": "2023-03-15",
+      "status": "Expired",
+       "selected": false, 
+      "actions": ["Edit", "Delete"]
+    },
+    {
+      "id": 102,
+      "number": "EXP-002",
+      "image": "Smart.png",
+      "title": "Expired Smart Fitness Tracker",
+      "code": "E-SFT-2022",
+      "manufactureDate": "2022-05-20",
+      "expiredDate": "2023-05-20",
+      "status": "Expired",
+      "actions": ["Edit", "Delete"]
+    },
+    {
+      "id": 103,
+      "number": "EXP-003",
+      "image": "Drone.jpg",
+      "title": "Expired 4K Ultra HD Camera Drone",
+      "code": "E-UHD-2022",
+      "manufactureDate": "2022-07-10",
+      "expiredDate": "2023-07-10",
+      "status": "Expired",
+      "actions": ["Edit", "Delete"]
+    }
+  ]
+}

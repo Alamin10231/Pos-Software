@@ -49,9 +49,7 @@ const AdminDashboard1 = () => {
       <div>
         <ProductTable />
       </div>
-      {/* <div>
-        <Recenttransaction></Recenttransaction>
-      </div> */}
+     
     </div>
   );
 };
